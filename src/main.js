@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import Home from './Home.vue';
 
-createApp(App).use(router).mount('#app')
+Vue.component("lamb-component", Home);
+new Vue({
+    el: '#app',
+    render: h => h(App)
+})
